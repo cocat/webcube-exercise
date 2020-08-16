@@ -1,0 +1,48 @@
+{
+    "teams": [{
+        "name": "开发团队",
+        "jobs": [{
+            "name": "Web 工程师",
+            "count": 3
+        }, {
+            "name": "iOS 工程师",
+            "count": 1
+        }, {
+            "name": "Android 工程师",
+            "count": 1
+        }, {
+            "name": "大数据工程师",
+            "count": 3
+        }, {
+            "name": "DevOps 工程师",
+            "count": 1
+        }]
+    }, {
+        "name": "产品团队",
+        "jobs": [{
+            "name": "UI 设计师",
+            "count": 2
+        }, {
+            "name": "UX 设计师",
+            "count": 2
+        }, {
+            "name": "产品经理",
+            "count": 1
+        }, {
+            "name": "大数据工程师",
+            "count": 3
+        }, {
+            "name": "DevOps 工程师",
+            "count": 1
+        }]
+    }, {
+        "name": "运营团队",
+        "jobs": [{
+            "name": "编辑",
+            "count": 3
+        }, {
+            "name": "市场",
+            "count": 1
+        }]
+    }]
+}

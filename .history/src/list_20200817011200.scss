@@ -1,0 +1,377 @@
+$joblist-bg:#f7f7f7;
+$main-blue:#1890ff;
+$line-height:54px;
+$line: 1px solid #E5E5E5;
+$font-family: 'Microsoft YaHei',
+Arial,
+Helvetica,
+sans-serif Helvetica,
+sans-serif;
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.alllist {
+    display: block;
+    width: 1100px;
+    background-color: $joblist-bg;
+}
+
+.teamlist,
+.joblist,
+.addjob {
+    display: inline-block;
+    height: $line-height;
+    width: 100%;
+    border-bottom: $line;
+    border-left: $line;
+    border-right: $line;
+}
+
+//team标题
+.teamlist {
+    display: block;
+    width: 1100px;
+    background-color: #fff;
+    line-height: 54px;
+    vertical-align: center;
+    position: relative;
+    .joblist {
+        background-color: $joblist-bg;
+    }
+    //展开收起箭头
+    .arrowTransform {
+        transition: 0.05s;
+        // transform-origin: center;
+        transform: rotateZ(90deg);
+    }
+    .arrowTransformReturn {
+        // display: none;
+        transition: 0.05s;
+        transform-origin: center;
+        transform: rotateZ(0deg);
+    }
+    .arrowTransformReturn,
+    .arrowTransform {
+        margin-left: 35px;
+    }
+    //checkbox------------------------
+    input {
+        margin-left: 76px;
+    }
+    //props
+    .teamname {
+        // display: block;
+        margin-left: 36px;
+    }
+    .teamcount {
+        display: inline-block;
+        position: absolute;
+        left: 494px;
+        top: 20px;
+    }
+    .editteam {
+        float: right;
+        // display: inline-block;
+        margin-right: 266px;
+        color: $main-blue;
+        line-height: $line-height;
+    }
+    span {
+        font-family: $font-family;
+        font-size: 14px, ;
+        color: #000000, ;
+        line-height: 14px;
+    }
+}
+
+.joblist {
+    position: relative;
+    display: block;
+    width: 1100px;
+    background-color: $joblist-bg;
+    line-height: 54px;
+    // vertical-align: center;
+    input {
+        margin-left: 126px;
+    }
+    span {
+        font-family: $font-family;
+        font-size: 14px;
+        line-height: 14px;
+    }
+    .jobname {
+        margin-left: 38px;
+        color: #717171;
+    }
+    .jobcount {
+        position: absolute;
+        left: 496px;
+        color: #717171;
+        top: 20px;
+    }
+    .editjob {
+        // float: right;
+        // position: absolute;
+        // right: 266px;
+        float: right;
+        // display: inline-block;
+        margin-right: 266px;
+        color: $main-blue;
+        line-height: $line-height;
+    }
+}
+
+//新增job 的新增行
+.addjob {
+    position: relative;
+    width: 1100;
+    height: 54px;
+    line-height: $line-height;
+    // 输入框格式定义
+    //待改进 type=num应该是自己封装一个，否则有滚动箭头
+    input {
+        outline-style: none;
+        border: 0px;
+        border-bottom: $line;
+        background-color: $joblist-bg;
+        padding: 4px 0;
+        width: 180px;
+        // &:focus {
+        //     border: 1px solid $main-blue;
+        // }
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            appearance: none;
+            margin: 0;
+        }
+        & {
+            -moz-appearance: textfield;
+        }
+    }
+    // 输入框
+    .addjobname,
+    .addjobcount {
+        &::-webkit-input-placeholder {
+            /* WebKit browsers*/
+            color: #C3C3C3;
+            font-size: 14px;
+        }
+        &::-moz-placeholder {
+            /* Mozilla Firefox 4 to 18*/
+            color: #C3C3C3;
+            font-size: 14px;
+        }
+        &::-moz-placeholder {
+            /* Mozilla Firefox 19+*/
+            color: #C3C3C3;
+            font-size: 14px;
+        }
+        &:-ms-input-placeholder {
+            /* Internet Explorer 10+*/
+            color: #C3C3C3;
+            font-size: 14px;
+        }
+    }
+    .addjobname {
+        position: absolute;
+        top: 18px;
+        left: 180px;
+    }
+    .addjobcount {
+        position: absolute;
+        left: 500px;
+        top: 18px;
+    }
+    // 提示字
+    // .addjobname+span {
+    //     position: absolute;
+    //     left: 360px;
+    // }
+    .addjobcount+span {
+        position: absolute;
+        left: 680px;
+    }
+    .addjobname+span,
+    .addjobcount+span {
+        font: $font-family;
+        font-size: 11px;
+        color: #CF0000;
+        line-height: 54px;
+    }
+    .addjobconfirm,
+    .addjobcancel {
+        font-size: 14px;
+        font: $font-family;
+        // line-height: 14px;
+        color: $main-blue;
+        position: absolute;
+        vertical-align: middle;
+    }
+    .addjobcancel {
+        right: 210px;
+    }
+    .addjobconfirm {
+        right: 266px;
+    }
+    .errorCount {
+        position: absolute;
+        left: 680px;
+    }
+    .errormessage {
+        position: absolute;
+        left: 360px;
+        font: $font-family;
+        font-size: 11px;
+        color: #CF0000;
+        line-height: 54px;
+    }
+    .visiblemes {
+        display: none;
+    }
+}
+
+//新增job的行
+.addJobLine {
+    width: 1100;
+    border-bottom: $line;
+    border-left: $line;
+    border-right: $line;
+    span {
+        font-family: $font-family;
+        font-size: 14px;
+        color: $main-blue;
+        line-height: $line-height;
+        margin-left: 180px;
+    }
+}
+
+//新增团队
+.addteam {
+    position: relative;
+    width: 1100;
+    height: 54px;
+    line-height: $line-height;
+    border-bottom: $line;
+    border-left: $line;
+    border-right: $line;
+    .addteamname {
+        outline-style: none;
+        border: 0px;
+        border-bottom: $line;
+        padding: 4px 0;
+        width: 180px;
+        position: absolute;
+        top: 18px;
+        left: 180px;
+        &::-webkit-input-placeholder {
+            /* WebKit browsers*/
+            color: #C3C3C3;
+            font-size: 14px;
+        }
+        &::-moz-placeholder {
+            /* Mozilla Firefox 4 to 18*/
+            color: #C3C3C3;
+            font-size: 14px;
+        }
+        &::-moz-placeholder {
+            /* Mozilla Firefox 19+*/
+            color: #C3C3C3;
+            font-size: 14px;
+        }
+        &:-ms-input-placeholder {
+            /* Internet Explorer 10+*/
+            color: #C3C3C3;
+            font-size: 14px;
+        }
+    }
+    .visiblemes {
+        display: none;
+    }
+    .errormessage {
+        position: absolute;
+        left: 360px;
+        font: $font-family;
+        font-size: 11px;
+        color: #CF0000;
+        line-height: 54px;
+    }
+    span {
+        font-size: 14px;
+        font: $font-family;
+        // line-height: 14px;
+        color: $main-blue;
+        position: absolute;
+        vertical-align: middle;
+    }
+    .addteamconfirm {
+        right: 258px;
+    }
+    .addteamcancel {
+        right: 202px;
+    }
+}
+
+.addTeamLine {
+    width: 1100px;
+    border-bottom: $line;
+    border-left: $line;
+    border-right: $line;
+    background-color: white;
+    span {
+        font-family: $font-family;
+        font-size: 14px;
+        color: $main-blue;
+        line-height: $line-height;
+        margin-left: 180px;
+    }
+}
+
+.addjob,
+.addJobLine {
+    display: block;
+    height: $line-height;
+    width: 1100px;
+    background-color: $joblist-bg;
+}
+
+.footer {
+    width: 1100px;
+    display: block;
+    height: 36px;
+    margin-top: 16px;
+    padding: 5px 20px;
+    span {
+        margin: 0 10px;
+        font-family: $font-family;
+        font-size: 14px;
+        color: rgba(0, 0, 0, 0.65);
+        line-height: 22px;
+    }
+    .reSetAll {
+        float: right;
+    }
+    .submitAll {
+        // overflow: hidden;
+        float: right;
+        margin: 0 0 0 20px;
+    }
+    button {
+        background: $main-blue;
+        border-radius: 2px;
+        font: $font-family;
+        font-size: 14px;
+        color: #FFFFFF;
+        text-align: center;
+        line-height: 24px;
+        width: 90px;
+        height: 36px;
+        border: none;
+        outline: none;
+        &:hover {
+            background-color: #0D7BE0;
+        }
+    }
+}

@@ -1,0 +1,78 @@
+$joblist-bg:#f7f7f7;
+$main-blue:#1890ff;
+$line-height:54px;
+$line: 1px solid #E5E5E5;
+.alllist {
+    display: block;
+    width: 1100px;
+    background-color: $joblist-bg;
+}
+
+.teamlist,
+.joblist {
+    display: inline-block;
+    height: $line-height;
+    width: 100%;
+    border-bottom: $line;
+}
+
+.teamlist {
+    background-color: #fff;
+    line-height: 54px;
+    vertical-align: center;
+    .joblist {
+        background-color: $joblist-bg;
+    }
+    //展开收起箭头
+    .arrowTransform {
+        transition: 0.05s;
+        // transform-origin: center;
+        transform: rotateZ(90deg);
+    }
+    .arrowTransformReturn {
+        // display: none;
+        transition: 0.05s;
+        transform-origin: center;
+        transform: rotateZ(0deg);
+    }
+    .arrowTransformReturn,
+    .arrowTransform {
+        margin-left: 35px;
+    }
+    //checkbox------------------------
+    input {
+        margin-left: 76px;
+    }
+    //props
+    .teamname {
+        // display: block;
+        margin-left: 36px;
+    }
+    .teamcount {
+        display: block;
+        margin-left: 258px;
+    }
+    span {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px, ;
+        color: #000000, ;
+        line-height: 14px;
+    }
+}
+
+.addjob,
+.addteam,
+.addJobLine,
+.addTeamLine {
+    // text-align: center;
+    display: block;
+    height: $line-height;
+    width: 1100px;
+    background-color: $joblist-bg;
+}
+
+.footer {
+    display: block;
+    height: 36px;
+    margin-top: 16px;
+}
